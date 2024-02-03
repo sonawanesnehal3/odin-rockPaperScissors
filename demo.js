@@ -3,17 +3,18 @@ let choices = ['rock', 'paper', 'scissor'];
 
 function getComputerChoice(){
     //console.log("Hello World!!");
-    console.log("Computer choice is : " , choices[Math.floor(Math.random() * choices.length)]);
+   //console.log("Computer choice is : " , choices[Math.floor(Math.random() * choices.length)]);
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-const playerSelection = "rock";
-console.log("Player choice is : " , playerSelection);
+//const playerSelection = "rock";
+//console.log("Player choice is : " , playerSelection);
 //let computerChoice = getComputerChoice();
 let playerscore = 0;
 
 function playRound(playerSelection){
     let computerChoice = getComputerChoice();
+    console.log("Computer choice is : " , computerChoice);
     if(computerChoice == playerSelection){
         console.log("It's a tie!");
         return playerscore;
@@ -30,10 +31,12 @@ function playRound(playerSelection){
 }
 
 //console.log(playRound(playerSelection,computerChoice));
-function playGame(playerSelection){
+function playGame(){
     
     for (let i = 0; i < 5; i++) {
         console.log("Playcount : " , i+1);
+        let playerSelection = prompt("What's your choice? ");
+        console.log("Player choice is : " , playerSelection);
         playRound(playerSelection);
     }
     console.log("Player score = " , playerscore);
@@ -41,8 +44,8 @@ function playGame(playerSelection){
             console.log("You won the Game!");
     }
     else{
-            console.log("You could not win!");
+            console.log("Sorry! You could not win!");
     }  
 }
 
-playGame(playerSelection);
+playGame();
