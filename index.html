@@ -4,13 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="demo.js" defer></script>
 </head>
 <body>
-    <script src="demo.js" defer></script>
+    
 
-    <div>
-        <h2>RockPaperScissors!</h2>
-        <h3>Open console to view the result!</h3>
+    <div class="header">
+        <h2 class="animated-heading">Rock Paper Scissors!</h2>
     </div>
+    <div class="playerchoice">
+        <div class="buttons">
+
+            <div class="buttonWithDiscription">
+                <button id="rock" value="rock"><img src="/images/rock.jpg" alt="rock"></button>
+                <div class="discription">
+                    <p>Rock</p>
+                </div>
+            </div>
+
+            <div class="buttonWithDiscription">
+                <button id="paper" value="paper"><img src="/images/paper.jpg" alt="paper"></button>
+                <div class="discription">
+                    <p>Paper</p>
+                </div>
+            </div>
+
+            <div class="buttonWithDiscription">
+                <button id="scissor" value="scissor"><img src="/images/scissor.jpg" alt="scissor"></button>
+                <div class="discription">
+                    <p>Scissor</p>
+                </div>
+            </div>  
+        </div>
+    
+        <div class="choice">
+            <div class="display-choice">
+                <p>You chose : <span class="player-decision"></span></p>
+                <p> Computer chose : <span class="computer-decision"></span></p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="score">
+        
+        <p>Your score : <span class="player-score"></span></p>
+        <p>Computer score : <span class="computer-score"></span></p>
+    </div>
+    
+    <div class="endresult">
+        <div class="result">
+            <p>Result :  <span class="winner"></span></p>
+        </div>
+    
+        <div class="play-again">
+            <button id="restart" value="restart">Restart</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+       <p>Made by <a href="https://github.com/sonawanesnehal3" target="_blank"> Snehal</a></p> 
+    </div>
+
 </body>
 </html>
